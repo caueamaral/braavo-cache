@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Braavo! Cache",
+  "description": "Extensão para o suporte da Braavo! limpar o cache.",
+  "version": "1.4",
+  "icons": { "128": "icon_128.png" },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["popup.js"],
+    "persistent": false
+  }
+}
