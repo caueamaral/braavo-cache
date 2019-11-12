@@ -8,9 +8,11 @@ const limparCache = () => {
       return chrome.tabs.update(tab[0].id, {url: url.replace('cache', '')})
     }
     
+    const pattern = /https:\/\/www.\w+-?\w+.\w+.\w+/
+    
     chrome.browserAction.setIcon({path: 'icon_black_and_white.png'})
     
-    chrome.tabs.update(tab[0].id, {url: url + 'cache'})
+    chrome.tabs.update(tab[0].id, {url: url.match(pattern)[0] + '/cache'})
   })
 }
 
